@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="documents.list">
+      <field name="name">documents list</field>
+      <field name="model">documents.documents</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="documents.action_window">
+      <field name="name">documents window</field>
+      <field name="res_model">documents.documents</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="documents" id="documents.menu_root" action="documents.action_window"/>
+
+
+  </data>
+</odoo>

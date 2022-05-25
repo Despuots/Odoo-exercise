@@ -10,8 +10,6 @@ class Wizard(models.TransientModel):
     date_start = fields.Date(string="Start Date", required=True)
     date_end = fields.Date(string="End Date", required=True)
 
-    document_id = fields.Many2one('documents.documents')
-
     def find_by_date(self):
         sorted_documents = []
         sort_documents = self.env['documents.documents'].search([('document_date', '>=', self.date_start),
@@ -21,8 +19,8 @@ class Wizard(models.TransientModel):
             sorted_documents.append({
                 'name': document.name,
                 'description': document.description,
-                'company_id': document.company_id.name
-
+                'company': document.company_id.name,
+                'document_date': document.document_date
             })
 
         data = {

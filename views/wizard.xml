@@ -14,7 +14,7 @@
                     </group>
                     <footer>
                         <button name="find_by_date" string="Find" class="btn-primary" type="object"/>
-                        <button string="Atšaukti" class="btn-secondary" special="cancel"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>
             </field>
@@ -31,7 +31,7 @@
 
 
         <record id="sorted_documents_report" model="ir.actions.report">
-            <field name="name"/>
+            <field name="name">Document report by date</field>
             <field name="model">documents.documents</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">documents.document_report</field>

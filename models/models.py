@@ -7,9 +7,10 @@ class Documents(models.Model):
     _name = 'documents.documents'
     _description = 'documents.documents'
 
-    name = fields.Char(string="Pavadinimas")
-    description = fields.Text(string="Aprašymas")
-    company_id = fields.Many2one('res.company', string="Kompanija")
+    name = fields.Char(string="Name")
+    description = fields.Text(string="Description")
+    company_id = fields.Many2one('res.company', string="Company")
+    document_date = fields.Date(default=fields.Datetime.now)
 
 
 

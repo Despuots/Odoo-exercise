@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <template id="document_report">
+        <t t-call="web.html_container">
+            <t t-foreach="vals" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Report title</h2>
+                        <tbody>
+
+                                <tr>
+                                    <td>
+                                        <span t-att-style="style" t-esc="doc['name']"/>
+                                    </td>
+                                    <td>
+                                        <span t-att-style="style" t-esc="doc['description']"/>
+                                    </td>
+                                    <td>
+                                        <span t-att-style="style" t-esc="doc['company_id']"/>
+                                    </td>
+                                </tr>
+
+                        </tbody>
+                    </div>
+                </t>
+            </t>
+        </t>
+
+    </template>
+
+</odoo>

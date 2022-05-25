@@ -3,7 +3,6 @@
     'name': "documents",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
@@ -25,6 +24,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'report/report.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/wizard.xml',
